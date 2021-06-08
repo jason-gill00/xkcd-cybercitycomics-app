@@ -17,6 +17,7 @@ app.use('/api', apiRoutes)
 
 if (process.env.NODE_ENV === 'production'){
     // app.use(express.static('../cyber-city-comics/build'));
+    console.log(process.env.PORT)
     console.log("IN THE PRODUCTION")
     app.use('/', express.static(path.join(__dirname, '/client/build')));
 
