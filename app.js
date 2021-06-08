@@ -29,6 +29,8 @@ if (process.env.NODE_ENV === 'production'){
     })
 } 
 
+app.set('port', (process.env.PORT));
+
 app.listen(PORT, () => {
     console.log(`Running on ${PORT}...`)
 })
