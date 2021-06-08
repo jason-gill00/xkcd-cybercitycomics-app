@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGODB_URI || dbURI, { useNewUrlParser: true, useU
 
 
 router.get('/', async(req, res) => {
+    console.log("IN THE ROUDTAKSDJLAKJ")
     const url = 'https://xkcd.com/1/info.0.json'
     const response = await fetch(url)
     const data = await response.json()
@@ -33,7 +34,8 @@ router.get('/', async(req, res) => {
     // res.send(data)
 })
 
-router.get('/:id', async(req, res) => {      
+router.get('/:id', async(req, res) => {   
+    console.log("IN THE /:id ROUTE")   
     try{
         const id = req.params.id
         const url = `https://xkcd.com/${id}/info.0.json`
