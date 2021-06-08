@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import arrow from "../img/arrow.png"
+import axios from 'axios';
 
 function Comic() {
 
@@ -13,11 +14,12 @@ function Comic() {
             //"homepage": ".",
             const url = `/api/${count}`
             console.log(url)
-            const response = await fetch(url);
-            console.log(response)
-            const data = await response.json();
-            console.log(data)
-            setComic(data)
+            // const response = await fetch(url);
+            const response = await axios.get(url)
+            console.log(response.data)
+            // const data = await response.json();
+            // console.log(data)
+            setComic(response.data)
         }
         fetchComic();
     }, [count])
