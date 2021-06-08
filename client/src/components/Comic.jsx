@@ -9,7 +9,7 @@ function Comic() {
 
     useEffect(() => {
         const fetchComic = async() => {
-            const url = `/api/${count}`
+            const url = `api/${count}`
             const response = await fetch(url);
             const data = await response.json();
             setComic(data)
