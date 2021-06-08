@@ -12,8 +12,11 @@ function Comic() {
             //"proxy": "http://localhost:5000/",
             //"homepage": ".",
             const url = `/api/${count}`
+            console.log(url)
             const response = await fetch(url);
+            console.log(response)
             const data = await response.json();
+            console.log(data)
             setComic(data)
         }
         fetchComic();
