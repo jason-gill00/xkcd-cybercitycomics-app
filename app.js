@@ -29,15 +29,15 @@ app.use(cors(corsOptions))
 // app.use(cors());
 app.use(express.json())
 
-app.use('/api', apiRoutes)
 app.set('port', (process.env.PORT));
 
 if (process.env.NODE_ENV === 'production'){
     // app.use(express.static('../cyber-city-comics/build'));
     console.log(process.env.PORT)
     console.log("IN THE PRODUCTION")
+    app.use('/api', apiRoutes)
     app.use('/', express.static(path.join(__dirname, '/client/build')));
-
+    
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
     })
