@@ -41,6 +41,7 @@ router.get('/:id', async(req, res) => {
         const url = `https://xkcd.com/${id}/info.0.json`
         const response = await fetch(url)
         const data = await response.json()
+        console.log(data)
     
         const result = await ComicCount.findOne({'comic_num': data.num})
         if(result){
