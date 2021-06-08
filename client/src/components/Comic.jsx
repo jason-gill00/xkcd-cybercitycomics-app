@@ -10,6 +10,7 @@ function Comic() {
     useEffect(() => {
         const fetchComic = async() => {
             //"proxy": "http://localhost:5000/",
+            //"homepage": ".",
             const url = `/api/${count}`
             const response = await fetch(url);
             const data = await response.json();
