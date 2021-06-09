@@ -11,7 +11,6 @@ const app = express()
 
 //Middleware
 
-/* The following code is to fix a Heroku bug perventing API Requests when deployed */
 const whitelist = ['http://localhost:5000', 'http://localhost:8080', 'https://xkcdstratus360cybercitycomics.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
@@ -26,13 +25,16 @@ const corsOptions = {
   }
 }
 app.use(cors(corsOptions))
-/* */
 
+// app.use(cors());
 app.use(express.json())
 
+app.set('port', (process.env.PORT));
 app.use('/api', apiRoutes)
 
 if (process.env.NODE_ENV === 'production'){
+    console.log(process.env.PORT)
+    console.log("IN THE PRODUCTION")
     app.use('/', express.static(path.join(__dirname, '/client/build')));
     
     app.get('*', (req, res) => {
