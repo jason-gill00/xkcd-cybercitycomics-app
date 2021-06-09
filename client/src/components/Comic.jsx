@@ -10,15 +10,9 @@ function Comic() {
 
     useEffect(() => {
         const fetchComic = async() => {
-            //"proxy": "http://localhost:5000/",
-            //"homepage": ".",
             const url = `/api/${count}`
-            console.log(url)
-            // const response = await fetch(url);
             const response = await axios.get(url)
             console.log(response.data)
-            // const data = await response.json();
-            // console.log(data)
             setComic(response.data)
         }
         fetchComic();
