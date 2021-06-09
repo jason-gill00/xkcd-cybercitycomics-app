@@ -20,11 +20,11 @@
     - [x]   Each comic page has a counter that displays the amount of times this specific comic strip has been viewed on your site
 
 
-### Cyber City Comics App Demo 
+## Cyber City Comics App Demo 
 
-![app-gif](https://user-images.githubusercontent.com/59940873/121285079-c4b39b80-c8ab-11eb-9a8f-465bba5ead46.gif)
+![comic-app-gif](https://user-images.githubusercontent.com/59940873/121285403-5ae7c180-c8ac-11eb-8244-6c9cec007f6e.gif)
 
-### API Call (Screenshot)
+## API Call (Screenshot)
 
 ![api-screenshot](https://user-images.githubusercontent.com/59940873/121284488-eceeca80-c8aa-11eb-81fb-e1ac38ab7d53.JPG)
 
