@@ -23,8 +23,8 @@ router.get('/', async(req, res) => {
             comic_num: data.num,
             comic_count: 1
         })
-        const data = await count.save()
-        res.json(data)
+        const stat = await count.save()
+        res.json(stat)
     } catch(err){
         console.log(err)
     }
